@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      .bg-img {
+        background:
+          linear-gradient(rgba(28, 7, 34, 0.6), rgba(9, 15, 37, 0.6)),
+          url("./11.jpg") center/cover;
+      }
+      .bg-color {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .fs-10 {
+        font-size: 4rem;
+      }
+      .placeholder-white::placeholder {
+        color: darkgray;
+      }
+      .form-control:focus {
+        color: cadetblue;
+        background-color: gray;
+      }
+      span:hover {
+        background-color: rgb(0, 191, 255);
+        color: white !important ;
+      }
+      span {
+        background-color: azure;
+      }
+      .btn:hover {
+        box-shadow: 1px 2px 25px rgba(203, 203, 203, 0.732);
+        color: red;
+      }
+      .card {
+        transition: all 0.4s ease-in-out;
+      }
+      .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 1px 1px 25px rgb(205, 205, 205);
+      }
+      .img-container {
+        position: relative;
+      }
+      .card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 110, 255, 0.285);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        pointer-events: none;
+      }
+      .left {
+        position: relative;
+        overflow: hidden;
+      }
+      .left .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 110, 255, 0.285);
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        pointer-events: none;
+      }
+      .card:hover .overlay {
+        opacity: 1;
+      }
+      .left:hover .overlay {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar-->
+    <div class="navbar bg-dark navbar-expand-lg fixed-top vw-100">
+      <div class="container-fluid py-2">
+        <a href="#" class="navbar-brand text-light">Personal Shape</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#home" class="nav-link text-light">home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link text-light">about</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link text-light">portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link text-light">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--main-->
+    <!--section-1-->
+    <div class="bg-img mt-5" id="home">
+      <div class="container min-vh-100">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6 text-center text-white mt-5">
+            <p class="font-p">Creative Designer</p>
+            <h1 class="display-3 fw-bold mt-4">
+              Transforming Ideas Into Beautiful Experiences
+            </h1>
+            <p class="mt-4">
+              I craft digital experiences that captivate, engage, and inspire
+              through thoughtful design and innovative solutions
+            </p>
+            <a
+              class="btn btn-outline-primary py-3 px-5 rounded-5 text-capitalize fs-5 mt-5 bg-light"
+              >explore my work</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section-2-->
+    <div class="container mt-5" id="about">
+      <div class="row align-items-center">
+        <h1
+          class="text-center display-3 fs-10 text-info text-capitalize pb-4 fw-bold mt-5"
+        >
+          about my
+        </h1>
+        <div class="col-12 col-lg-5 left rounded-5 p-0">
+          <img src="./11.jpg" alt="" class="img-fluid" />
+          <div class="overlay"></div>
+        </div>
+        <div class="col-12 col-lg-7 p-4">
+          <div class="row">
+            <h1 class="mb-4">
+              Passionate about creating meaningful digital experiences
+            </h1>
+            <p class="lh-lg">
+              With over 5 years of experience in digital design, I specialize in
+              creating user-centered solutions that bridge the gap between
+              functionality and aesthetics. My approach combines strategic
+              thinking with creative execution to deliver impactful results.
+            </p>
+            <p class="lh-lg">
+              I believe that great design is not just about how it looks, but
+              how it works and how it makes people feel. Every project is an
+              opportunity to solve problems and create connections that matter.
+            </p>
+            <p class="lh-lg">
+              When I'm not designing, you'll find me exploring new technologies,
+              sketching ideas, or seeking inspiration in nature and
+              architecture.
+            </p>
+            <div class="row">
+              <div class="d-flex flex-wrap gap-3 mt-4 g-4 gy-5">
+                <span class="text-primary border rounded-pill p-2"
+                  >UI/UX Design</span
+                >
+
+                <span class="text-primary border rounded-pill p-2"
+                  >Web Development</span
+                >
+
+                <span class="text-primary border rounded-pill p-2"
+                  >Brand Identity
+                </span>
+
+                <span class="text-primary border rounded-pill p-2"
+                  >Motion Graphics
+                </span>
+
+                <span class="text-primary border rounded-pill p-2"
+                  >Prototyping
+                </span>
+
+                <span class="text-primary border rounded-pill p-2"
+                  >Design Systems
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section-3-->
+    <div class="container mt-5" id="portfolio">
+      <div class="row g-4">
+        <h1
+          class="text-center display-4 fs-10 text-info text-capitalize pb-4 fw-bold mt-5"
+        >
+          Featured Work
+        </h1>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card p-0 h-100 rounded-5 overflow-hidden">
+            <div class="img-container">
+              <img src="./11.jpg" class="card-img-top" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">E-commerce Platform</h5>
+              <p class="card-text mt-3">
+                A modern, responsive e-commerce solution with focus on user
+                experience and conversion optimization. Built with scalability
+                and performance in mind.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <span class="text-primary border rounded-pill p-2"
+                  >UI/UX Design</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Web Development</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Brand Identity
+                </span>
+                <span class="text-primary border rounded-pill p-2"
+                  >Motion Graphics
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card p-0 h-100 rounded-5 overflow-hidden">
+            <div class="img-container">
+              <img src="./12.jpg" class="card-img-top" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Brand Identity System</h5>
+              <p class="card-text mt-3">
+                Complete visual identity redesign for a tech startup, including
+                logo, guidelines, and digital assets. Creating a cohesive brand
+                experience across all touchpoints.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <span class="text-primary border rounded-pill p-2"
+                  >UI/UX Design</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Web Development</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Brand Identity
+                </span>
+                <span class="text-primary border rounded-pill p-2"
+                  >Motion Graphics
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card p-0 h-100 rounded-5 overflow-hidden">
+            <div class="img-container">
+              <img src="./11.jpg" class="card-img-top" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Mobile App Design</h5>
+              <p class="card-text mt-3">
+                Intuitive mobile app interface for a fitness tracking
+                application with focus on accessibility and user engagement
+                through gamification.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <span class="text-primary border rounded-pill p-2"
+                  >UI/UX Design</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Web Development</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Brand Identity
+                </span>
+                <span class="text-primary border rounded-pill p-2"
+                  >Motion Graphics
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card p-0 h-100 rounded-5 overflow-hidden">
+            <div class="img-container">
+              <img src="./12.jpg" class="card-img-top" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Dashboard Interface</h5>
+              <p class="card-text mt-3">
+                Clean and functional dashboard design for data analytics
+                platform with complex information architecture and real-time
+                data visualization.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <span class="text-primary border rounded-pill p-2"
+                  >UI/UX Design</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Web Development</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Brand Identity
+                </span>
+                <span class="text-primary border rounded-pill p-2"
+                  >Motion Graphics
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card p-0 h-100 rounded-5 overflow-hidden">
+            <div class="img-container">
+              <img src="./11.jpg" class="card-img-top" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Marketing Website</h5>
+              <p class="card-text mt-3">
+                Modern marketing website with interactive animations and
+                optimized conversion funnels. Built for maximum performance and
+                SEO.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <span class="text-primary border rounded-pill p-2"
+                  >UI/UX Design</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Web Development</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Brand Identity
+                </span>
+                <span class="text-primary border rounded-pill p-2"
+                  >Motion Graphics
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card p-0 h-100 rounded-5 overflow-hidden">
+            <div class="img-container">
+              <img src="./12.jpg" class="card-img-top" alt="" />
+              <div class="overlay"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3">Creative Portfolio</h5>
+              <p class="card-text mt-3">
+                Artistic portfolio website featuring immersive galleries, smooth
+                transitions, and creative storytelling for a digital artist.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <span class="text-primary border rounded-pill p-2"
+                  >UI/UX Design</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Web Development</span
+                >
+                <span class="text-primary border rounded-pill p-2"
+                  >Brand Identity
+                </span>
+                <span class="text-primary border rounded-pill p-2"
+                  >Motion Graphics
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section-4-->
+    <div class="bg-img" id="contact">
+      <div class="container py-5 mt-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h1
+              class="text-center display-3 fs-10 text-capitalize fw-bold pb-4 text-info"
+            >
+              Let's Work Together
+            </h1>
+            <p class="text-center text-white">
+              Ready to bring your vision to life? Let's discuss how we can
+              create something amazing together. I'm always excited to take on
+              new challenges and collaborate on innovative projects.
+            </p>
+            <div class="form">
+              <div class="row justify-content-center">
+                <div class="col-lg-6">
+                  <label for="" class="text-white">name</label>
+                  <input
+                    type="text"
+                    placeholder="name"
+                    title="input name"
+                    class="form-control placeholder-white text-light fw-bold my-3 py-3 rounded-4 bg-color"
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <label for="" class="text-white">email</label>
+                  <input
+                    type="email"
+                    placeholder="email"
+                    title="input email"
+                    class="form-control placeholder-white text-light fw-bold my-3 py-3 rounded-4 bg-color"
+                  />
+                </div>
+                <div class="col-lg-12">
+                  <label for="" class="text-white">subject</label>
+                  <input
+                    type="text"
+                    placeholder="subject"
+                    title="input subject"
+                    class="form-control placeholder-white text-light fw-bold my-3 py-3 rounded-4 bg-color"
+                  />
+                </div>
+                <div class="col-lg-12">
+                  <label for="" class="text-white">message</label>
+                  <textarea
+                    name=""
+                    placeholder="message"
+                    title="input message"
+                    class="form-control placeholder-white text-light fw-bold my-3 py-3 rounded-4 bg-color"
+                    id=""
+                  ></textarea>
+                </div>
+                <div class="col-12 my-5">
+                  <button
+                    class="btn btn-outline-primary w-100 text-capitalize fs-5 rounded-5 p-3 bg-light"
+                  >
+                    send message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <div class="row align-items-center justify-content-between bg-dark p-3 g-0">
+      <div class="col-lg-6">
+        <h5 class="text-light">© 2025 Personal Shape. All rights reserved.</h5>
+      </div>
+      <div class="col-lg-5">
+        <ul class="d-flex flex-wrap justify-content-around gap-3 list-unstyled">
+          <li>
+            <a href="" class="text-decoration-none text-light"
+              >privacy policy</a
+            >
+          </li>
+          <li>
+            <a href="" class="text-decoration-none text-light">terms of use</a>
+          </li>
+          <li>
+            <a href="" class="text-decoration-none text-light">sitemap</a>
+          </li>
+          <li>
+            <a href="" class="text-decoration-none text-light"
+              >provided by template mo</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    ></script>
+  </body>
+</html>
